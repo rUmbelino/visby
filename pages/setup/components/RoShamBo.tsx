@@ -12,7 +12,7 @@ const RoShamBo: React.FC = () => {
 
     return (
         <>
-            <Form.Label>{t('home.form.ro_sham_bo_title')}</Form.Label>
+            <Form.Label>{t('setup.form.ro_sham_bo_title')}</Form.Label>
             <Container>
                 <Row className='justify-content-center'>
                     {items.map(item => {

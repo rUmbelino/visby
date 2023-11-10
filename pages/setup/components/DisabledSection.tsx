@@ -15,19 +15,19 @@ const DisableCheckboxItem: React.FC<DisableCheckboxItemArgs> = ({ description })
 )
 
 const DisabledSection = () => {
-    const { t } = useTranslation('home.form');
+    const { t } = useTranslation();
 
     return (
         <Accordion>
             <Accordion.Item eventKey="0">
-                <Accordion.Header>{t('comming_soon_title')}</Accordion.Header>
+                <Accordion.Header>{t('setup.form.comming_soon_title')}</Accordion.Header>
                 <Accordion.Body style={{ background: 'var(--bs-gray-300)' }}>
-                    <DisableCheckboxItem description={t('allow_pressure')} />
-                    <DisableCheckboxItem description={t('allow_no_comply')} />
-                    <DisableCheckboxItem description={t('allow_late_flips')} />
-                    <DisableCheckboxItem description={t('allow_quarter')} />
-                    <DisableCheckboxItem description={t('allow_grinds')} />
-                    <DisableCheckboxItem description={t('allow_slides')} />
+                    <DisableCheckboxItem description={t('setup.form.allow_pressure')} />
+                    <DisableCheckboxItem description={t('setup.form.allow_no_comply')} />
+                    <DisableCheckboxItem description={t('setup.form.allow_late_flips')} />
+                    <DisableCheckboxItem description={t('setup.form.allow_quarter')} />
+                    <DisableCheckboxItem description={t('setup.form.allow_grinds')} />
+                    <DisableCheckboxItem description={t('setup.form.allow_slides')} />
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>

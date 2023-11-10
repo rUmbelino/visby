@@ -25,7 +25,7 @@ const descriptionBuilder = (value: number, ...i18keys: string[]) => {
         for (let i = 0; i < i18keys.length; i++) {
             const isRightDescription = value < (rangeSize * (i + 1))
             if (isRightDescription) {
-                return `home.form.${i18keys[i]}`
+                return `setup.form.${i18keys[i]}`
             }
         }
     }
@@ -33,7 +33,7 @@ const descriptionBuilder = (value: number, ...i18keys: string[]) => {
     return ''
 }
 
-export const useStartButton = () => {
+export const useGameSetup = () => {
     const [trickComplexity, setTickComplexity, skillTrickDescription] = useRangeProps({
         initialValue: 40,
         getDescription: (value: number) => {
@@ -47,9 +47,6 @@ export const useStartButton = () => {
             return descriptionBuilder(value, 'trick_tip_low', 'trick_tip_mid', 'trick_tip_high')
         }
     })
-
-
-
 
     return {
         buddySkill, setBuddySkill, buddySkillDescription,

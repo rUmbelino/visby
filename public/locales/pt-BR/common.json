@@ -1,7 +1,9 @@
 {
 	"home": {
 		"welcome_message": "Visby comming to Life!",
-		"start": "Iniciar",
+		"start": "Iniciar"
+	},
+	"setup": {
 		"form": {
 			"title": "Configuração",
 			"trick_range_label": "Dificuldade das manobras",
