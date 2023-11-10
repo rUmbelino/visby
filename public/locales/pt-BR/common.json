@@ -19,6 +19,7 @@
 			"allow_quarter": "Vale mandar no quarter",
 			"allow_grinds": "Vale mandar no caixote",
 			"allow_slides": "Vale mandar no corrimao",
+			"ro_sham_bo_title": "Pedra, Papel, ou Tesoura?",
 			"start": "Comecar"
 		}
 	}

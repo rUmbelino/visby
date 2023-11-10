@@ -1,7 +1,7 @@
 import { useTranslation } from 'next-i18next';
 import { Button } from 'react-bootstrap';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import StartButton from '@/components/StartButton/Component';
+import StartButton from '@/components/StartButton/StartButton';
 
 // @ts-ignore
 export const getServerSideProps = async ({ locale }) => ({
