@@ -1,0 +1,25 @@
+{
+	"home": {
+		"welcome_message": "Visby comming to Life!",
+		"start": "Iniciar",
+		"form": {
+			"title": "Configuração",
+			"trick_range_label": "Dificuldade das manobras",
+			"buddy_range_label": "Habilidade do adversario",
+			"trick_tip_low": "Ollie e as variacoes",
+			"trick_tip_mid": "Ollies, Variais e variacoes",
+			"trick_tip_high": "Ollie, Variais, Flips e variacoes",
+			"buddy_tip_low": "Iniciante",
+			"buddy_tip_mid": "Tem as base",
+			"buddy_tip_high": "Marreta!",
+			"comming_soon_title": "Avancado (Em Breve...)",
+			"allow_pressure": "Vale mandar pressure",
+			"allow_no_comply": "Vale mandar no-comply",
+			"allow_late_flips": "Vale mandar late flip",
+			"allow_quarter": "Vale mandar no quarter",
+			"allow_grinds": "Vale mandar no caixote",
+			"allow_slides": "Vale mandar no corrimao",
+			"start": "Comecar"
+		}
+	}
+}
