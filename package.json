@@ -18,7 +18,8 @@
     "react": "^18",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18",
-    "react-i18next": "^13.3.1"
+    "react-i18next": "^13.3.1",
+    "unstated-next": "^1.1.0"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -1,10 +1,12 @@
 import { Button, Form } from 'react-bootstrap';
 import { useTranslation } from 'next-i18next';
 import { useGameSetup } from '../useGameSetup';
-import RoShamBo from './RoShamBo';
 import DisabledSection from './DisabledSection';
+import { useRouter } from 'next/router';
+
 
 const SetupGameForm = () => {
+    const router = useRouter()
     const { t } = useTranslation();
     const { buddySkill, setBuddySkill, buddySkillDescription, trickComplexity, setTickComplexity, skillTrickDescription } = useGameSetup()
 
@@ -21,9 +23,11 @@ const SetupGameForm = () => {
                 <Form.Range value={buddySkill} onChange={e => setBuddySkill(Number(e.target.value))} />
                 <small>{t(buddySkillDescription)}</small>
             </Form.Group>
-            <RoShamBo />
             <DisabledSection />
-            <Button size='lg' className='my-3 d-block m-auto'>{t('setup.form.start')}</Button>
+
+            <Button className='m-auto mt-4 d-block m-auto' size='lg' onClick={() => router.push('/game')}>
+                {t('setup.form.start')}
+            </Button>
         </Form>
     )
 }

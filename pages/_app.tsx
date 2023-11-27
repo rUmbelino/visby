@@ -2,20 +2,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import type { AppProps } from 'next/app';
 import { Container } from 'react-bootstrap';
 import { appWithTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GameSetupContextProvider } from '@/hooks/useGameSetup';
+import { useEffect } from 'react';
 
-// @ts-ignore
-export const getServerSideProps = async ({ locale }) => ({
-	props: {
-		...(await serverSideTranslations(locale, ['common']))
-	}
-});
+const App = (props: AppProps) => {
+	const { Component, pageProps } = props
 
-const App = ({ Component, pageProps }: AppProps) => {
+	useEffect(() => {
+		console.log('MOUNTING APP')
+		console.log(pageProps)
+		return () => console.log('UNMOUNTING APP')
+	}, [])
+
 	return (
-		<Container>
-			<Component {...pageProps} />
-		</Container>
+		<GameSetupContextProvider>
+			<Container>
+				<Component {...pageProps} />
+			</Container>
+		</GameSetupContextProvider>
 	);
 };
 
