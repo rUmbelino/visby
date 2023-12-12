@@ -2,24 +2,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import type { AppProps } from 'next/app';
 import { Container } from 'react-bootstrap';
 import { appWithTranslation } from 'next-i18next';
-import { GameSetupContextProvider } from '@/hooks/useGameSetup';
-import { useEffect } from 'react';
+import { Provider } from 'react-redux';
+import { store } from '@/utils/store';
 
 const App = (props: AppProps) => {
-	const { Component, pageProps } = props
-
-	useEffect(() => {
-		console.log('MOUNTING APP')
-		console.log(pageProps)
-		return () => console.log('UNMOUNTING APP')
-	}, [])
+	const { Component, pageProps } = props;
 
 	return (
-		<GameSetupContextProvider>
+		<Provider store={store}>
 			<Container>
 				<Component {...pageProps} />
 			</Container>
-		</GameSetupContextProvider>
+		</Provider>
 	);
 };
 

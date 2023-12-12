@@ -1,9 +1,5 @@
-import { useGameSetup } from "@/hooks/useGameSetup"
-
 const Game = () => {
-    useGameSetup()
+	return <div>Game</div>;
+};
 
-    return (<div>Game</div>)
-}
-
-export default Game
+export default Game;

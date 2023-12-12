@@ -2,31 +2,25 @@ import { useTranslation } from 'next-i18next';
 import { Button } from 'react-bootstrap';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
-import { useGameSetup } from '@/hooks/useGameSetup';
-import { useEffect } from 'react';
 
 // @ts-ignore
 export const getServerSideProps = async ({ locale }) => ({
 	props: {
-		...(await serverSideTranslations(locale, ['common']))
-	}
+		...(await serverSideTranslations(locale, ['common'])),
+	},
 });
 
 export default function Home() {
 	const { t } = useTranslation();
-	const router = useRouter()
-	const { setValue } = useGameSetup()
-
-
-	useEffect(() => {
-		setValue('INDEX PAGE SET THIS VALUE!')
-	}, [])
+	const router = useRouter();
 
 	return (
 		<div className="d-flex flex-column justify-content-around" style={{ height: '80vh' }}>
 			<h1 className="text-center">{t('home.welcome_message')}</h1>
 			<div className="d-flex">
-				<Button className='m-auto' size='lg' onClick={() => router.push('/setup')}>{t('home.start')}</Button>
+				<Button className="m-auto" size="lg" onClick={() => router.push('/setup')}>
+					{t('home.start')}
+				</Button>
 			</div>
 		</div>
 	);
